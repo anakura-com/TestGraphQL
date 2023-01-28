@@ -1,0 +1,43 @@
+1. get user's permission as a collaborator in some repository
+
+    # query
+    query($userLogin:String!, $organizationName:String!, $repositoryName: String!) {
+        user(login: $userLogin){
+            organization(login: $organizationName){
+                repository(name: $repositoryName){
+                    collaborators(first:1){
+                        edges{
+                            permission
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    # parameters
+    {
+        "userLogin": "beqpad",
+        "organizationName": "anakura-com",
+        "repositoryName": "TestGraphQL"
+    }
+
+    # response example
+    {
+        "data": {
+            "user": {
+                "organization": {
+                    "repository": {
+                        "collaborators": {
+                            "edges": [
+                                {
+                                    "permission": "ADMIN"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+
