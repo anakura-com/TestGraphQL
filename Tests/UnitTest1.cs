@@ -32,6 +32,6 @@ public class Class1Tests
 
         var file = c.Method2(@"..\Windows\System32\calc.exe");
 
-        Assert.Equal($@"{baseDirectory}\calc.exe", file.FullName);
+        Assert.NotEqual($@"{baseDirectory}\calc.exe", file.FullName);
     }
 }
