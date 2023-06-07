@@ -5,11 +5,11 @@ namespace Tests;
 public class Class1Tests
 {
     [Fact]
-    public void Method1_Succeeds()
+    public async Task Method1_Succeeds()
     {
         var c = new Class1();
 
-        c.Method1();
+        await c.Method1Async();
     }
 
     [Fact]
