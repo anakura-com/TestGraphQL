@@ -1,11 +1,11 @@
 namespace TestGraphQL;
-public class Class1
+public static class Class1
 {
-    public void Method1()
+    private static HttpClient _client = new HttpClient();
+    public static async Task<string> Method1Async()
     {
-        // 非推奨の API を使用する
-        var client = new System.Net.WebClient();
-        var s = client.DownloadString("http://example.com/");
+        // 推奨のAPIに置き換える
+        var s = await _client.GetStringAsync("http://example.com/");
 
         // アンセーフなメモリの使用で、領域外にアクセスする
         unsafe
@@ -14,14 +14,16 @@ public class Class1
             p[1] = 0;
         }
         
+        return s;
     }
 
-    public FileInfo Method2(string relativePath)
+    public static FileInfo Method2(string relativePath)
     {
-        var baseDirectory = @"c:\work";
+        var pc = Path.PathSeparator;
+        var baseDirectory = $"c:{pc}work";
 
         // パスの結合を文字列の結合で行う
-        var path = baseDirectory + @"\" + relativePath;
+        var path = $"{baseDirectory}{pc}{relativePath}";
 
         // パラメータ repativePath によっては、
         // baseDirectory と path の間に \..\ が含まれる可能性がある
