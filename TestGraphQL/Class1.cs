@@ -1,3 +1,4 @@
+namespace TestGraphQL;
 public class Class1
 {
     public void Method1()
@@ -15,19 +16,21 @@ public class Class1
         
     }
 
-    public void Method2(string relativePath)
+    public FileInfo Method2(string relativePath)
     {
-        var baseDirectory = "C:\\work";
+        var baseDirectory = @"c:\work";
 
         // パスの結合を文字列の結合で行う
-        var path = baseDirectory + "\\" + relativePath;
+        var path = baseDirectory + @"\" + relativePath;
 
         // パラメータ repativePath によっては、
         // baseDirectory と path の間に \..\ が含まれる可能性がある
         // 例えば、relativePath が ..\..\..\..\Windows\System32\calc.exe の場合、
         // path は C:\Windows\System32\calc.exe となる
         // これにより、意図しないファイルを開く可能性がある
-        System.Diagnostics.Process.Start(path);
-        
+
+        var reuslt = new FileInfo(path);
+
+        return reuslt;        
     }
 }
