@@ -19,7 +19,7 @@ public static class Class1
 
     public static FileInfo Method2(string relativePath)
     {
-        var pc = Path.PathSeparator;
+        var pc = Path.DirectorySeparatorChar;
         var baseDirectory = $"c:{pc}work";
 
         // パスの結合を文字列の結合で行う
