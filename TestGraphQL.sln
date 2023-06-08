@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGraphQL", "TestGraphQL\TestGraphQL.csproj", "{1580A053-EC88-4091-BDAA-8F8C271E1EC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{C6DB64FC-F388-46A7-AE12-355F2220A766}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1580A053-EC88-4091-BDAA-8F8C271E1EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1580A053-EC88-4091-BDAA-8F8C271E1EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1580A053-EC88-4091-BDAA-8F8C271E1EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1580A053-EC88-4091-BDAA-8F8C271E1EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6DB64FC-F388-46A7-AE12-355F2220A766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6DB64FC-F388-46A7-AE12-355F2220A766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6DB64FC-F388-46A7-AE12-355F2220A766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6DB64FC-F388-46A7-AE12-355F2220A766}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
