@@ -1,10 +1,13 @@
-namespace TestGraphQL;
+// namespace TestGraphQL;
 
-public class DbContextExample : DbContext
-{
-    public DbSet<Example> Examples { get; set; }
+// using Microsoft.EntityFrameworkCore;
+// using System.Data.Entity;
 
-    public DbContextExample(DbContextOptions<DbContextExample> options) : base(options)
-    {
-    }
-}
+// public class DbContextExample : DbContext
+// {
+//     public DbSet<Example> Examples { get; set; }
+
+//     public DbContextExample(DbContextOptions<DbContextExample> options) : base(options)
+//     {
+//     }
+// }
